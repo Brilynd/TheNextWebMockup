@@ -1,0 +1,269 @@
+html{
+    background-color: rgb(245, 243, 243);
+}
+*{
+    font-family: 'Noto Sans Display', sans-serif;
+    margin:0 auto;
+}
+.StickyHeader{
+    position: sticky;
+    top:0;
+}
+
+.navBar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    z-index: 3;
+    background-color: rgb(245, 243, 243);
+    width: 100%;
+
+}
+.navBar ul{
+    width: 40%;
+    text-align: center;
+    display: flex;
+    list-style: none;
+}
+.navBar li{
+    display: flex;
+    font-size: .8rem;
+    margin: 0;
+    white-space: nowrap;
+    padding-top: 1%;
+
+    padding-left: 3%;
+    padding-right: 3%;
+    height: 100%;
+    text-decoration: none;
+    color: rgb(119, 119, 119);
+}
+.navBar li:hover{
+    color: black;
+    background-color: white;
+}
+.navBar svg{
+height: 1rem;
+margin-top: .65%;
+    
+}
+.SmallNav{
+
+    display: none;
+    padding:1.25% .75%;
+    background-color: white;
+}
+.SmallNav img{
+    margin: 0;
+    width: 2.75%;
+    height: 2.75%;
+}
+.SmallNav svg{
+
+    margin-left: 1rem;
+    width: 3rem;
+    height: auto;
+}
+.Banner{
+    margin-top: .4%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    padding-left: 5%;
+    background-color: #fd3;
+
+}
+.Banner p{
+    font-size: .8rem;
+}
+.LogoHeader{
+    margin-top: 6%;
+    margin-bottom: 6%;
+    display: flex;
+}
+.LogoHeader svg{
+    height: auto;
+    max-width: 10%;
+}
+.LogoHeader p{
+
+    font-size: 2rem;
+    color: rgba(80,86,102);
+}
+.ArticleContainer{
+    width: 80%;
+}
+.Articles{
+    max-width: 100rem;
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns:  25% 25% 25% 25%;
+    grid-template-rows: 1fr 1fr;
+
+}
+.ArticleOne{
+    width: 100%;
+grid-row-start: 1;
+grid-row-end: 2;
+grid-column-start: 1;
+grid-column-end: 3;
+position: relative;
+}
+#articlePhoto{
+    width: 100%;
+    height: 100%;
+position: relative;
+object-fit: cover;
+}
+.ArticleText{
+    margin-left: 3%;
+    position: absolute;
+    bottom:3%;
+}
+.ArticleText h1{
+color: white;
+font-size: 2rem;
+}
+.ArticleText h2{
+font-size: .8rem;
+color:white;
+}
+.ArticleTwo{
+    width: 100%;
+    grid-row: 3,5;
+    grid-column: 3,5;
+
+
+
+    position: relative;
+
+}
+.ArticleThree{
+    grid-row-start: 2;
+grid-row-end: 3;
+grid-column-start: 4;
+grid-column-end: 4;
+    grid-row: (4,5);
+    grid-column: (1,2);
+    position: relative;
+}
+.ArticleFour{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+position: relative;
+grid-row: 1,3;
+grid-column: 3,4;
+}
+.ArticleFive{
+    overflow:hidden;
+    text-align: center;
+    grid-row-start: 2;
+grid-row-end: 3;
+grid-column-start: 1;
+grid-column-end: 3;
+position: relative;
+}
+.articleButtonDisplay{
+    width: 70%;
+    position: absolute;
+    margin: auto;
+    top: 30%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.ArticleFive button{
+    padding: 2% 5%;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    border-radius: 20px ;
+}
+.ArticleFive h1{
+    color: white;
+    font-size: 1.5rem;
+    max-width: 25ch;
+    margin-bottom: 3%;
+}
+.containerArticlesToday{
+    margin-top: 2.5%;
+    padding-top: 2%;
+    background-color: #f7f8f8;
+    padding-bottom: 4%;
+}
+.PopularArticles{
+    margin-top: 3%;
+    text-align: center;
+    width: 85%;
+    margin-bottom: 10%;
+}
+.PopularArticles h2{
+    color:#a7aab2;
+    margin-bottom: 3%;
+}
+.PopularArticles ul{
+    display: flex;
+}
+.PopularArticles li{
+    max-width: 30ch;
+    list-style: none;
+    font-size: 1rem;
+    margin-left: 3%;
+    font-weight: 600;
+    line-height: 1;
+}
+.PopularArticles span{
+    color: rgb(204,0,153);
+    font-size: 1.5rem;
+    margin-right: 3%;
+    vertical-align: middle;
+}
+.PopularArticles  li:hover{
+    text-decoration: underline rgb(204,0,153);
+}
+
+@media (max-width:960px){
+    .Banner{
+        display: none;
+    }
+    .navBar{
+        display: none;
+    }
+    .LogoHeader{
+        display: block;
+        text-align: center;
+    }
+    .LogoHeader svg{
+        max-width: 40%;
+    }
+    .SmallNav{
+        display: flex;
+    }
+    .Articles{
+        display: block;
+    }
+    .ArticleText h1{
+        font-size: 2rem;
+    }
+    .ArticleText h2{
+
+        font-size: .8rem;
+    }
+    .PopularArticles ul{
+        text-align: left;
+        display: block;
+    }
+    .PopularArticles li{
+        margin-bottom:3% ;
+        max-width: 100%;
+    }
+}
+@media (max-width:1272px){
+    .ArticleText h1{
+        font-size: 1rem;
+    }
+    .ArticleText h2{
+        font-size: .4rem;
+    }
+}
